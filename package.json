@@ -1,0 +1,40 @@
+{
+  "name": "todo-app",
+  "private": true,
+  "type": "module",
+  "keywords": ["nuxtjs", "typescript", "bun", "client-side-rendering", "poc"],
+  "version": "1.0.0",
+  "author": {
+    "name": "Jesús Fernández Jiménez",
+    "email": "jesusfj710@proton.me",
+    "url": "https://jesusfj710.github.io"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/jesusfj710/todo-app"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/ui": "^2.10.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "latest",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "nuxt": "^3.8.1",
+    "postcss": "^8.4.31",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "localforage": "^1.10.0",
+    "pinia": "^2.1.7"
+  }
+}
