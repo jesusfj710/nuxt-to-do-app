@@ -14,8 +14,8 @@ onMounted(() => {
 
 <template>
   <div id="app-layout" class="flex flex-col h-screen">
+    <SideMenu />
     <HeaderComponent />
     <slot />
-    <FooterComponent />
   </div>
 </template>

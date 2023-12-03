@@ -7,6 +7,8 @@ export default defineI18nConfig(() => ({
       code: 'en',
       languageName: 'English',
       welcome: 'Welcome',
+      options: 'Options',
+      language: 'Language',
       all: 'All',
       favs: 'Favs',
       done: 'Done',
@@ -18,6 +20,8 @@ export default defineI18nConfig(() => ({
     es: {
       code: 'es',
       languageName: 'Español',
+      options: 'Opciones',
+      language: 'Idioma',
       welcome: 'Bienvenido',
       all: 'Todas',
       favs: 'Favoritas',
@@ -30,6 +34,8 @@ export default defineI18nConfig(() => ({
     ko: {
       code: 'ko',
       languageName: '한국어',
+      options: '옵션',
+      language: '언어',
       welcome: '환영합니다',
       all: '전체',
       favs: '즐겨찾기',
