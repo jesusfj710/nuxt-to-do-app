@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.cdnfonts.com/css/atkinson-hyperlegible' }]
     }
   },
-  modules: ['@nuxtjs/eslint-module', '@nuxt/ui', '@pinia/nuxt'],
+  modules: ['@nuxtjs/eslint-module', '@nuxt/ui', '@pinia/nuxt', '@nuxtjs/i18n'],
   plugins: [
     '~/plugins/localforage.ts'
   ]

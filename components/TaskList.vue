@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTasksStore } from '~/stores/taskStore'
 
-const taskStatuses = ['All', 'Fav', 'Done'] as const
+const taskStatuses = ['all', 'favs', 'done'] as const
 
 type TASK_STATUS = typeof taskStatuses[number];
 
@@ -9,16 +9,16 @@ interface tabs {
   label: TASK_STATUS,
   icon: string
 }
-const taskStatus = ref<TASK_STATUS>('All')
+const taskStatus = ref<TASK_STATUS>('all')
 
 const items: Array<tabs> = [{
-  label: 'All',
+  label: 'all',
   icon: 'i-heroicons-rectangle-stack'
 }, {
-  label: 'Fav',
+  label: 'favs',
   icon: 'i-heroicons-star'
 }, {
-  label: 'Done',
+  label: 'done',
   icon: 'i-heroicons-check-circle'
 }
 ]
@@ -31,11 +31,11 @@ function onChange (index: number) {
 
 const filteredTasks = computed(() => {
   switch (taskStatus.value) {
-    case 'All':
+    case 'all':
       return tasksStore.tasks
-    case 'Fav':
+    case 'favs':
       return tasksStore.favoriteTasks
-    case 'Done':
+    case 'done':
       return tasksStore.doneTasks
   }
 })
@@ -54,11 +54,10 @@ const orderedTasks = computed(() => {
   >
     <template #default="{ item }">
       <div class="flex items-center gap-2 relative truncate">
-        <UIcon
-          :name="item.icon"
-          class="w-4 h-4 flex-shrink-0"
-        />
-        <span> {{ item.label }}</span>
+        <UIcon :name="item.icon" class="w-4 h-4 flex-shrink-0" />
+        <span>
+          {{ $t(item.label) }}
+        </span>
       </div>
     </template>
     <template #item="">
@@ -71,19 +70,19 @@ const orderedTasks = computed(() => {
     <TaskAccordion
       class="xl:col-start-2 backdrop-blur-xl bg-white/50 dark:bg-black/50 p-2 rounded-l-xl"
       :tasks="tasksStore.tasks"
-      label="All"
+      :label="$t('all')"
       icon="i-heroicons-rectangle-stack"
     />
     <TaskAccordion
       class="backdrop-blur-xl bg-white/50 dark:bg-black/50 p-2"
       :tasks="tasksStore.favoriteTasks"
-      label="Favs"
+      :label="$t('favs')"
       icon="i-heroicons-star"
     />
     <TaskAccordion
       class="backdrop-blur-xl bg-white/50 dark:bg-black/50 p-2 rounded-r-xl"
       :tasks="tasksStore.doneTasks"
-      label="Done"
+      :label="$t('done')"
       icon="i-heroicons-check-circle"
     />
   </div>

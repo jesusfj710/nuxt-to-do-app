@@ -56,13 +56,13 @@ function loadSampleData () {
   >
     <UButtonGroup label="Name" name="name" class="flex">
       <UInput v-model="newTask.name" class="grow" />
-      <UButton id="add-task-button" type="submit" label="Add task" icon="i-heroicons-plus" />
+      <UButton id="add-task-button" type="submit" :label="$t('addTask')" icon="i-heroicons-plus" />
       <UButton
         v-if="!hasTasks"
         id="sample-data-button"
         class="bg-white/50 dark:bg-black/30"
         variant="outline"
-        label="sample data"
+        :label="$t('sampleData')"
         @click="loadSampleData"
       />
     </UButtonGroup>
