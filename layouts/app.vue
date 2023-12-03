@@ -2,10 +2,12 @@
 import { useTasksStore } from '~/stores/taskStore'
 
 const tasksStore = useTasksStore()
+const appStore = useAppStore()
 
 onMounted(() => {
   // Initialize the store to fetch tasks from localForage
   tasksStore.initialize()
+  appStore.initialize()
 })
 
 </script>

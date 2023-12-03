@@ -5,5 +5,6 @@
     >
       TO-DO app
     </h1>
+    <LanguageSelectMenu />
   </header>
 </template>

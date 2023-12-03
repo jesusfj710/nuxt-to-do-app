@@ -33,6 +33,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "next",
     "@pinia/nuxt": "^0.5.1",
     "localforage": "^1.10.0",
     "pinia": "^2.1.7"
